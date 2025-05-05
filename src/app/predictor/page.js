@@ -2,7 +2,9 @@ import React from 'react'
 
 const CollegePredictor = () => {
   return (
-    <div></div>
+    <div>
+      
+    </div>
   )
 }
 

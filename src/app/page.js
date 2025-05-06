@@ -18,7 +18,7 @@ export default function Home() {
     <section>
       <div className="px-9 py-10">
         <h1 className="text-3xl font-semibold my-10">Explore Our Features</h1>
-        <div className="flex flex-row items-center justify-center space-x-10">
+        <div className="flex flex-row items-center justify-center space-x-10 snap-x">
           <div className="outline-solid outline-1px outline-gray-200 rounded-[12px] p-5 shadow-md space-y-2 transition-all duration-300 transform hover:scale-[1.02]"style={{ boxShadow: 'rgba(153, 153, 160, 0.2) 0px 7px 29px 0px'}}>
             <h2 className="text-xl font-semibold ">Career Quiz</h2>
             <p className="text-base text-gray-500">Find your ideal career path with our personalized quiz</p>
@@ -43,8 +43,8 @@ export default function Home() {
     </section>
     <section className="mb-12 px-9 py-10">
         <h2 className="mb-8 text-2xl font-bold">Student Success Stories</h2>
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-lg border bg-white p-6 shadow-sm transition-all duration-300 transform hover:scale-[1.02]" style={{ boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
+        <div className="overflow-x-auto snap-x snap-mandatory flex gap-6 px-4">
+          <div className="min-w-[600px] snap-center rounded-lg border bg-white p-6 shadow-sm transition-all duration-300 transform hover:scale-[1.02]" style={{ boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
             <p className="mb-4 italic text-gray-600">
               "The career quiz helped me discover my passion for computer science. I'm now studying at my dream
               college!"
@@ -59,13 +59,27 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="rounded-lg border bg-white p-6 shadow-sm transition-all duration-300 transform hover:scale-[1.02]" style={{ boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
+          <div className="min-w-[600px] snap-center rounded-lg border bg-white p-6 shadow-sm transition-all duration-300 transform hover:scale-[1.02]" style={{ boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
+            <p className="mb-4 italic text-gray-600">
+            "The counseling tool clarified all my doubts about engineering branches. I finally chose what truly excites me!"
+            </p>
+            <div className="flex items-center">
+              <div className="mr-4 h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center">
+                <Image src="/images/student3.jpeg" alt="Student 3" width={100} height={100} className="rounded-full" />
+              </div>
+              <div>
+                <p className="font-medium">Rohan M.</p>
+                <p className="text-sm text-gray-500">Electronics & Communication Student</p>
+              </div>
+            </div>
+          </div>
+          <div className="min-w-[700px] snap-center rounded-lg border bg-white p-6 shadow-sm transition-all duration-300 transform hover:scale-[1.02]" style={{ boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
             <p className="mb-4 italic text-gray-600">
               "The college predictor was spot on! I got into 3 of the 5 colleges it recommended for me."
             </p>
             <div className="flex items-center">
               <div className="mr-4 h-10 w-10 rounded-full bg-gray-200">
-                <Image src="/images/student2.jpeg" alt="Student 2" width={40} height={40} className="rounded-full" />
+                <Image src="/images/student2.jpeg" alt="Student 3" width={40} height={40} className="rounded-full" />
               </div>
               <div>
                 <p className="font-medium">Rahul M.</p>

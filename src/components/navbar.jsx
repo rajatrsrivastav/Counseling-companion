@@ -1,8 +1,6 @@
-// components-navbar
 import Link from "next/link";
 import React from "react";
 import { User } from 'lucide-react';
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,

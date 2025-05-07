@@ -1,4 +1,3 @@
-// dashboard page
 import React from "react";
 import { Download, UserRoundIcon as UserRoundPen, GraduationCap, MessageSquare } from 'lucide-react';
 import Link from "next/link";

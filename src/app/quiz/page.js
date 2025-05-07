@@ -1,8 +1,10 @@
-import React from 'react'
+import { Book} from "lucide-react"
+import { Button } from "@/components/ui/button";
+
 
 const quiz = () => {
   return (
-    <div>
+    <div className="px-70 py-15">
       <h1 className="text-3xl font-bold mb-8">Career Fit Quiz</h1>
       <div className="max-w-3xl">
     <p className="mb-6 text-lg text-gray-600">
@@ -43,13 +45,18 @@ const quiz = () => {
     </div>
 
     <div className="rounded-lg border bg-white p-6 shadow-sm">
-      <EmptyState
-        icon={Book}
-        title="Ready to discover your career path?"
-        description="The quiz takes about 10 minutes to complete. Your results will be saved to your dashboard."
-        buttonText="Start Quiz Now"
-        onButtonClick={() => {}}
-      />
+    <div className="flex flex-col items-center justify-center text-center py-10 px-4">
+      <Book className="h-12 w-12 text-gray-400 mb-4" />
+      <h2 className="text-xl font-semibold">Ready to discover your career path?</h2>
+      <p className="text-gray-500 mt-2">
+        The quiz takes about 10 minutes to complete. Your results will be saved to your dashboard.
+      </p>
+      <Button
+        className="mt-6 bg-black text-white hover:bg-gray-800"
+      >
+        Start Quiz Now
+      </Button>
+    </div>
     </div>
   </div>
 </div>

@@ -24,78 +24,49 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="w-full overflow-x-auto">
-  <div className="flex flex-row items-center justify-start space-x-10 px-10 py-5 snap-x snap-mandatory"></div>
-        <div
-          className="min-w-[400px] snap-center outline-solid w-100 outline-1px outline-gray-200 rounded-[7px] p-5 shadow-md space-y-2 bg-white transition-all duration-300 transform hover:scale-[1.02]"
-          style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-        >
-          <h2 className="text-2xl font-semibold">Quiz Summary</h2>
-          <p className="text-base text-gray-500">Your career fit profile</p>
-          <div className="flex flex-col items-center justify-center space-y-2 py-5s space-y-5 text-center mb-10 mt-10">
-            <p className="text-gray-500 text-base">
-              You haven't taken the Career Fit Quiz yet.
+        <div className="flex flex-row items-center justify-center space-x-10 px-10 py-5 snap-x snap-mandatory">
+          <div
+            className="min-w-[400px] snap-center outline-solid w-100 outline-1px outline-gray-200 rounded-[7px] p-5 shadow-md space-y-2 bg-white transition-all duration-300 transform hover:scale-[1.02]"
+            style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
+          >
+            <h2 className="text-2xl font-semibold">Quiz Summary</h2>
+            <p className="text-base text-gray-500">Your career fit profile</p>
+            <div className="flex flex-col items-center justify-center space-y-2 py-5s space-y-5 text-center mb-10 mt-10">
+              <p className="text-gray-500 text-base">
+                You haven't taken the Career Fit Quiz yet.
+              </p>
+              <button className="bg-black text-white rounded py-2 px-5 text-sm hover:bg-gray-800 transition duration-300 text-[1rem]">
+                <Link href="/quiz">Take Quiz Now</Link>
+              </button>
+            </div>
+          </div>
+          <div
+            className="min-w-[400px] snap-center outline-solid w-100 outline-1px outline-gray-200 rounded-[7px] p-5 shadow-md space-y-2 bg-white transition-all duration-300 transform hover:scale-[1.02]"
+            style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
+          >
+            <h2 className="text-2xl font-semibold">College Predictor</h2>
+            <p className="text-base text-gray-500">
+              Find your best college match
             </p>
-            <button className="bg-black text-white rounded py-2 px-5 text-sm hover:bg-gray-800 transition duration-300 text-[1rem]">
-              <Link href="/quiz">Take Quiz Now</Link>
-            </button>
+            <div className="flex flex-col items-center justify-center space-y-2 py-5s space-y-5 text-center mb-10 mt-10">
+              <GraduationCap className="text-gray-400" size={30} />
+              <button className="bg-black text-white rounded py-2 px-5 text-sm hover:bg-gray-800 transition duration-300 text-[1rem]">
+                <Link href="/predictor">Launch College Predictor</Link>
+              </button>
+            </div>
           </div>
-        </div>
-        <div
-          className="min-w-[400px] snap-center outline-solid w-100 outline-1px outline-gray-200 rounded-[7px] p-5 shadow-md space-y-2 bg-white transition-all duration-300 transform hover:scale-[1.02]"
-          style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-        >
-          <h2 className="text-2xl font-semibold">College Predictor</h2>
-          <p className="text-base text-gray-500">
-            Find your best college match
-          </p>
-          <div className="flex flex-col items-center justify-center space-y-2 py-5s space-y-5 text-center mb-10 mt-10">
-            <GraduationCap className="text-gray-400" size={30} />
-            <button className="bg-black text-white rounded py-2 px-5 text-sm hover:bg-gray-800 transition duration-300 text-[1rem]">
-              <Link href="/predictor">Launch College Predictor</Link>
-            </button>
-          </div>
-        </div>
-        <div
-          className="min-w-[400px] snap-center outline-solid w-100 outline-1px outline-gray-200 rounded-[7px] p-5 shadow-md space-y-2 bg-white transition-all duration-300 transform hover:scale-[1.02]"
-          style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-        >
-          <h2 className="text-2xl font-semibold">Quiz Summary</h2>
-          <p className="text-base text-gray-500">Your career fit profile</p>
-          <div className="flex flex-col items-center justify-center space-y-2 py-5s space-y-5 text-center mb-10 mt-10">
-            <p className="text-gray-500 text-base">
-              You haven't taken the Career Fit Quiz yet.
-            </p>
-            <button className="bg-black text-white rounded py-2 px-5 text-sm hover:bg-gray-800 transition duration-300 text-[1rem]">
-              <Link href="/quiz">Take Quiz Now</Link>
-            </button>
-          </div>
-        </div>
-        <div
-          className="min-w-[400px] snap-center outline-solid w-100 outline-1px outline-gray-200 rounded-[7px] p-5 shadow-md space-y-2 bg-white transition-all duration-300 transform hover:scale-[1.02]"
-          style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-        >
-          <h2 className="text-2xl font-semibold">Quiz Summary</h2>
-          <p className="text-base text-gray-500">Your career fit profile</p>
-          <div className="flex flex-col items-center justify-center space-y-2 py-5s space-y-5 text-center mb-10 mt-10">
-            <p className="text-gray-500 text-base">
-              You haven't taken the Career Fit Quiz yet.
-            </p>
-            <button className="bg-black text-white rounded py-2 px-5 text-sm hover:bg-gray-800 transition duration-300 text-[1rem]">
-              <Link href="/quiz">Take Quiz Now</Link>
-            </button>
-          </div>
-        </div>
-        <div
-          className="min-w-[400px] snap-center outline-solid w-100 outline-1px outline-gray-200 rounded-[7px] p-5 shadow-md space-y-2 bg-white transition-all duration-300 transform hover:scale-[1.02]"
-          style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-        >
-          <h2 className="text-2xl font-semibold">AI Counselor</h2>
-          <p className="text-base text-gray-500">Get personalized guidance</p>
-          <div className="flex flex-col items-center justify-center space-y-2 py-5s space-y-5 text-center mb-10 mt-10">
-            <MessageSquare className="text-gray-400" size={30} />
-            <button className="bg-black text-white rounded py-2 px-5 text-sm hover:bg-gray-800 transition duration-300 text-[1rem]">
-              <Link href="/quiz">Open AI Counselor</Link>
-            </button>
+          <div
+            className="min-w-[400px] snap-center outline-solid w-100 outline-1px outline-gray-200 rounded-[7px] p-5 shadow-md space-y-2 bg-white transition-all duration-300 transform hover:scale-[1.02]"
+            style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
+          >
+            <h2 className="text-2xl font-semibold">AI Counselor</h2>
+            <p className="text-base text-gray-500">Get personalized guidance</p>
+            <div className="flex flex-col items-center justify-center space-y-2 py-5s space-y-5 text-center mb-10 mt-10">
+              <MessageSquare className="text-gray-400" size={30} />
+              <button className="bg-black text-white rounded py-2 px-5 text-sm hover:bg-gray-800 transition duration-300 text-[1rem]">
+                <Link href="/quiz">Open AI Counselor</Link>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -140,7 +111,7 @@ const Dashboard = () => {
           </TabsContent>
           <TabsContent value="tab-3" className="w-full py-15">
             <p className="text-muted-foreground p-4 text-center text-xs">
-            <div className="flex flex-col items-center justify-center space-x-5 bg-white rounded py-10 px-3 text-sm flex items-center space-x-2 space-y-5"></div>
+              <div className="flex flex-col items-center justify-center space-x-5 bg-white rounded py-10 px-3 text-sm flex items-center space-x-2 space-y-5"></div>
             </p>
           </TabsContent>
         </Tabs>

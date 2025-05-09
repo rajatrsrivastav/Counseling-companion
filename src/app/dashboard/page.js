@@ -87,17 +87,17 @@ const Dashboard = () => {
               Your Branch Recommendations
             </h1>
             <p className="text-muted-foreground p-4 text-center text-xs">
-              <div className="flex flex-col items-center justify-center space-x-0 sm:space-x-5 bg-white rounded py-6 sm:py-10 px-3 text-sm flex items-center space-x-0 sm:space-x-2 space-y-3 sm:space-y-5"></div>
+              <span className="flex flex-col items-center justify-center space-x-0 sm:space-x-5 bg-white rounded py-6 sm:py-10 px-3 text-sm flex items-center space-x-0 sm:space-x-2 space-y-3 sm:space-y-5"></span>
             </p>
           </TabsContent>
           <TabsContent value="tab-2" className="w-full py-6 sm:py-10 md:py-15">
             <p className="text-muted-foreground p-4 text-center text-xs">
-              <div className="flex flex-col items-center justify-center space-x-0 sm:space-x-5 bg-white rounded py-6 sm:py-10 px-3 text-sm flex items-center space-x-0 sm:space-x-2 space-y-3 sm:space-y-5"></div>
+              <span className="flex flex-col items-center justify-center space-x-0 sm:space-x-5 bg-white rounded py-6 sm:py-10 px-3 text-sm flex items-center space-x-0 sm:space-x-2 space-y-3 sm:space-y-5"></span>
             </p>
           </TabsContent>
           <TabsContent value="tab-3" className="w-full py-6 sm:py-10 md:py-15">
             <p className="text-muted-foreground p-4 text-center text-xs">
-              <div className="flex flex-col items-center justify-center space-x-0 sm:space-x-5 bg-white rounded py-6 sm:py-10 px-3 text-sm flex items-center space-x-0 sm:space-x-2 space-y-3 sm:space-y-5"></div>
+              <span className="flex flex-col items-center justify-center space-x-0 sm:space-x-5 bg-white rounded py-6 sm:py-10 px-3 text-sm flex items-center space-x-0 sm:space-x-2 space-y-3 sm:space-y-5"></span>
             </p>
           </TabsContent>
         </Tabs>

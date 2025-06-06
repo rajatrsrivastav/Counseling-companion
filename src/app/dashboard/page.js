@@ -1,13 +1,18 @@
 import React from "react";
-import { Download, UserRoundIcon as UserRoundPen, GraduationCap, MessageSquare } from 'lucide-react';
+import {
+  UserRoundIcon as UserRoundPen,
+  GraduationCap,
+  MessageSquare,
+} from "lucide-react";
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const Dashboard = () => {
   return (
     <div className="bg-gray-100">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between px-4 sm:px-6 md:px-10 py-6 sm:py-10 md:py-15">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-0">Student Dashboard</h1>
-        
+        <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-0">
+          Student Dashboard
+        </h1>
       </div>
       <div className="w-full overflow-x-auto px-2 sm:px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center justify-start space-y-6 md:space-y-0 md:space-x-4 lg:space-x-10 px-2 sm:px-4 md:px-10 py-2 sm:py-3 md:py-5 snap-x snap-mandatory">
@@ -16,7 +21,9 @@ const Dashboard = () => {
             style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
           >
             <h2 className="text-xl sm:text-2xl font-semibold">Quiz Summary</h2>
-            <p className="text-sm sm:text-base text-gray-500">Your career fit profile</p>
+            <p className="text-sm sm:text-base text-gray-500">
+              Your career fit profile
+            </p>
             <div className="flex flex-col items-center justify-center space-y-2 py-3 sm:py-5 space-y-3 sm:space-y-5 text-center mb-6 sm:mb-10 mt-6 sm:mt-10">
               <p className="text-gray-500 text-sm sm:text-base">
                 You haven't taken the Career Fit Quiz yet.
@@ -30,12 +37,14 @@ const Dashboard = () => {
             className="w-full md:min-w-[300px] lg:min-w-[400px] snap-center outline-solid outline-1px outline-gray-200 rounded-[7px] p-4 sm:p-5 shadow-md space-y-2 bg-white transition-all duration-300 transform hover:scale-[1.02]"
             style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
           >
-            <h2 className="text-xl sm:text-2xl font-semibold">College Predictor</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold">
+              College Predictor
+            </h2>
             <p className="text-sm sm:text-base text-gray-500">
               Find your best college match
             </p>
             <div className="flex flex-col items-center justify-center space-y-2 py-3 sm:py-5 space-y-3 sm:space-y-5 text-center mb-6 sm:mb-10 mt-6 sm:mt-10">
-              <GraduationCap className="text-gray-400" size={24}/>
+              <GraduationCap className="text-gray-400" size={24} />
               <button className="bg-black text-white rounded py-1.5 sm:py-2 px-3 sm:px-5 text-xs sm:text-sm hover:bg-gray-800 transition duration-300 text-[0.875rem] sm:text-[1rem]">
                 <Link href="/predictor">Launch College Predictor</Link>
               </button>
@@ -46,11 +55,13 @@ const Dashboard = () => {
             style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
           >
             <h2 className="text-xl sm:text-2xl font-semibold">AI Counselor</h2>
-            <p className="text-sm sm:text-base text-gray-500">Get personalized guidance</p>
+            <p className="text-sm sm:text-base text-gray-500">
+              Get personalized guidance
+            </p>
             <div className="flex flex-col items-center justify-center space-y-2 py-3 sm:py-5 space-y-3 sm:space-y-5 text-center mb-6 sm:mb-10 mt-6 sm:mt-10">
               <MessageSquare className="text-gray-400" size={24} />
               <button className="bg-black text-white rounded py-1.5 sm:py-2 px-3 sm:px-5 text-xs sm:text-sm hover:bg-gray-800 transition duration-300 text-[0.875rem] sm:text-[1rem]">
-                <Link href="/quiz">Open AI Counselor</Link>
+                <Link href="/counselor">Open AI Counselor</Link>
               </button>
             </div>
           </div>
@@ -104,7 +115,9 @@ const Dashboard = () => {
       </div>
       <div className="px-4 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5">
         <div>
-          <h1 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-5">Upcoming Events</h1>
+          <h1 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-5">
+            Upcoming Events
+          </h1>
         </div>
         <div className="flex flex-col items-center justify-center space-x-0 sm:space-x-5 bg-white rounded py-6 sm:py-10 px-3 text-sm flex items-center space-x-0 sm:space-x-2 space-y-3 sm:space-y-5">
           <p className="text-gray-500 text-sm sm:text-base">

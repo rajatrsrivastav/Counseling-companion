@@ -35,8 +35,8 @@ const navbar = () => {
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <div className="bg-gray-200 rounded-full p-2 flex items-center justify-center">
-              <User size={20} className="text-gray-500 hover:text-black" />
+            <div className="p-2 flex items-center justify-center">
+              <User size={22} className="text-gray-500 hover:text-black" />
             </div>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
@@ -45,6 +45,9 @@ const navbar = () => {
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
+              <DropdownMenuItem>
+                <Link href="/notification">Notification</Link>
+              </DropdownMenuItem>
               <DropdownMenuItem>
                 <Link href="/settings">Settings</Link>
               </DropdownMenuItem>

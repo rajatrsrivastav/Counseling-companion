@@ -18,7 +18,6 @@ const collegeData = [
     location: "Lucknow",
     cutoffRank: 1000,
     fees: "₹80K/year",
-    chance: "Medium",
   },
   {
     name: "MAMC",
@@ -26,7 +25,6 @@ const collegeData = [
     location: "Delhi",
     cutoffRank: 1500,
     fees: "₹50K/year",
-    chance: "High",
   },
   {
     name: "Grant Medical College",
@@ -34,7 +32,6 @@ const collegeData = [
     location: "Mumbai",
     cutoffRank: 2000,
     fees: "₹1.2L/year",
-    chance: "High",
   },
   {
     name: "Kasturba Medical College",
@@ -42,7 +39,6 @@ const collegeData = [
     location: "Manipal",
     cutoffRank: 3000,
     fees: "₹15L/year",
-    chance: "High",
   },
   {
     name: "JIPMER",
@@ -50,7 +46,6 @@ const collegeData = [
     location: "Puducherry",
     cutoffRank: 500,
     fees: "₹30K/year",
-    chance: "Low",
   },
   {
     name: "AIIMS Delhi",
@@ -58,7 +53,6 @@ const collegeData = [
     location: "Delhi",
     cutoffRank: 100,
     fees: "₹25K/year",
-    chance: "Very Low",
   },
 ];
 
@@ -80,67 +74,12 @@ const predictor = () => {
   };
 
   const predictColleges = () => {
-    if (!formData.rank || !formData.category) {
-      alert("Please enter your rank and category");
-      return;
-    }
-
     const userRank = parseInt(formData.rank);
-    let predictions = [];
-
-    collegeData.forEach((college) => {
-      let adjustedCutoff = college.cutoffRank;
-
-      if (formData.category === "obc") {
-        adjustedCutoff = Math.floor(college.cutoffRank * 1.27);
-      } else if (formData.category === "sc") {
-        adjustedCutoff = Math.floor(college.cutoffRank * 1.5);
-      } else if (formData.category === "st") {
-        adjustedCutoff = Math.floor(college.cutoffRank * 1.6);
-      } else if (formData.category === "ews") {
-        adjustedCutoff = Math.floor(college.cutoffRank * 1.1);
-      }
-
-      let chance = "Low";
-      if (userRank <= adjustedCutoff * 0.8) {
-        chance = "High";
-      } else if (userRank <= adjustedCutoff) {
-        chance = "Medium";
-      } else if (userRank <= adjustedCutoff * 1.2) {
-        chance = "Low";
-      } else {
-        chance = "Very Low";
-      }
-
-      if (chance !== "Very Low") {
-        predictions.push({
-          ...college,
-          cutoffRank: adjustedCutoff,
-          chance,
-        });
-      }
-    });
-
-    predictions.sort((a, b) => {
-      const chanceOrder = { High: 3, Medium: 2, Low: 1 };
-      return chanceOrder[b.chance] - chanceOrder[a.chance];
-    });
-
-    setPredictions(predictions);
+    const filteredColleges = collegeData.filter(
+      (college) => userRank <= college.cutoffRank
+    );
+    setPredictions(filteredColleges);
     setShowResults(true);
-  };
-
-  const getChanceColor = (chance) => {
-    switch (chance) {
-      case "High":
-        return "bg-green-500";
-      case "Medium":
-        return "bg-yellow-500";
-      case "Low":
-        return "bg-orange-500";
-      default:
-        return "bg-gray-500";
-    }
   };
 
   const getCategoryName = (category) => {
@@ -170,14 +109,15 @@ const predictor = () => {
               College Prediction Results
             </h1>
             <p className="text-gray-600">
-              Based on your NEET rank of {formData.rank} in{" "}
-              {getCategoryName(formData.category)} category
+              Based on your NEET rank of {formData.rank}{" "}
+              {formData.category &&
+                `in ${getCategoryName(formData.category)} category`}
             </p>
           </div>
 
           <div className="mb-6">
             <h2 className="text-xl font-bold mb-4">
-              Colleges with Good Admission Chances ({predictions.length} found)
+              Eligible Colleges ({predictions.length} found)
             </h2>
           </div>
 
@@ -192,16 +132,6 @@ const predictor = () => {
                     <h3 className="text-lg font-bold">{college.name}</h3>
                     <p className="text-gray-600">{college.course}</p>
                     <p className="text-gray-600">{college.location}</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span
-                      className={`px-3 py-1 rounded-full text-white text-sm ${getChanceColor(
-                        college.chance
-                      )}`}
-                    >
-                      {college.chance} Chance
-                    </span>
-                    {college.name === "KGMU"}
                   </div>
                 </div>
 
@@ -241,8 +171,8 @@ const predictor = () => {
       </h1>
       <div className="max-w-3xl">
         <p className="mb-4 sm:mb-6 text-base sm:text-lg text-gray-600">
-          Find colleges where you have a good chance of admission based on your
-          exam rank, category, and preferences.
+          Find colleges where you are eligible for admission based on your exam
+          rank and category.
         </p>
 
         <div className="mb-4 sm:mb-8 rounded-lg border bg-white p-4 sm:p-6 shadow-sm">
@@ -360,5 +290,4 @@ const predictor = () => {
     </div>
   );
 };
-
-export default predictor
+export default predictor;

@@ -12,7 +12,7 @@ import {
   BotMessageSquare,
 } from "lucide-react";
 
-const Page = () => {
+const page = () => {
   const router = useRouter();
 
   const handlePreviewClick = () => {
@@ -117,4 +117,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default page;

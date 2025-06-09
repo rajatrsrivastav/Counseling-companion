@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <main>
+    <div>
         <div className="px-4 sm:px-8 md:px-16 lg:px-70 py-6 sm:py-10 md:py-15">
             <h1 className='text-2xl sm:text-3xl font-bold my-6 sm:my-10'>Our Mission</h1>
             <p className='text-base sm:text-lg text-gray-500'>We are dedicated to providing personalized college counseling services to help students navigate the complex college admissions process. Our goal is to empower students with the knowledge and resources they need to make informed decisions about their future.</p>
@@ -33,7 +33,7 @@ const page = () => {
             <h1 className='text-2xl sm:text-3xl font-bold my-6 sm:my-10'>Our Team</h1>
             <p className='text-base sm:text-lg text-gray-500'>Our team consists of experienced college counselors, educators, and technology experts who are passionate about helping students succeed. We leverage the latest advancements in AI technology to provide personalized guidance and support.</p>
         </div>
-    </main>
+    </div>
   )
 }
 

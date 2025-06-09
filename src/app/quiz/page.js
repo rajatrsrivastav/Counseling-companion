@@ -162,10 +162,6 @@ const quiz = () => {
     const selectedField = answers[0];
     const recommendedColleges = collegeRecommendations[selectedField] || [];
     
-    console.log("Selected Field:", selectedField);
-    console.log("Recommended Colleges:", recommendedColleges);
-    console.log("All Answers:", answers);
-
     return (
       <div className="min-h-screen bg-gray-50 px-4 sm:px-8 md:px-16 lg:px-70 py-6 sm:py-10 md:py-15">
         <div className="max-w-4xl mx-auto">

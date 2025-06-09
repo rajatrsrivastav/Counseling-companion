@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Send } from "lucide-react"
 
-export default function CounselorChatPage() {
+export default function counselor() {
   return (
     <div className="px-4 sm:px-8 md:px-16 lg:px-70 py-6 sm:py-10 md:py-15">
       <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-8">AI Counselor Chat</h1>

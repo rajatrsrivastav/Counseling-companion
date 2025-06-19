@@ -322,8 +322,8 @@ const quiz = () => {
           </Stepper>
         </div>
       </div>
-      <div className="border rounded-xl shadow-sm">
-        <div className="p-6 border-b">
+      <div className="">
+        <div className="pb-6">
           <h2 className="text-lg sm:text-xl font-semibold">
             {currentQuestion.question}
           </h2>

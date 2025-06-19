@@ -12,7 +12,7 @@ import {
   BotMessageSquare,
 } from "lucide-react";
 
-const page = () => {
+const Chat = () => {
   const router = useRouter();
 
   const handlePreviewClick = () => {
@@ -21,7 +21,7 @@ const page = () => {
 
   return (
     <div>
-      <div className="flex justify-start items-center flex-col bg-gradient-to-b from-[#f2f4f7] to-[#e4e7eb] to-[#F472B6] h-100 w-full p-4 sm:p-6 md:p-10 space-y-4 sm:space-y-5 md:space-y-7">
+      <div className="flex justify-start items-center flex-col bg-gradient-to-b from-[#f2f4f7] to-[#e4e7eb] h-100 w-full p-4 sm:p-6 md:p-10 space-y-4 sm:space-y-5 md:space-y-7">
         <Badge className="bg-gray-400 text-white text-xs sm:text-sm">
           Coming Soon – Free for All
         </Badge>
@@ -117,4 +117,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Chat;

@@ -167,7 +167,7 @@ const predictor = () => {
   return (
     <div className="px-4 sm:px-8 md:px-16 lg:px-70 py-6 sm:py-10 md:py-15">
       <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-8">
-        College Predictor
+        NEET College Predictor
       </h1>
       <div className="max-w-3xl">
         <p className="mb-4 sm:mb-6 text-base sm:text-lg text-gray-600">
@@ -271,19 +271,6 @@ const predictor = () => {
                 Predict Colleges
               </Button>
             </div>
-          </div>
-        </div>
-
-        <div className="rounded-lg border bg-white p-4 sm:p-6 shadow-sm">
-          <div className="flex flex-col items-center justify-center py-6 sm:py-8 text-center">
-            <GraduationCap className="mb-3 sm:mb-4 h-12 sm:h-16 w-12 sm:w-16 text-gray-300" />
-            <h3 className="mb-2 text-base sm:text-lg font-medium">
-              No Predictions Yet
-            </h3>
-            <p className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-500">
-              Enter your details above to see college predictions based on your
-              profile.
-            </p>
           </div>
         </div>
       </div>

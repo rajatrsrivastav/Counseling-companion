@@ -28,7 +28,7 @@ const SignUp = () => {
       console.log({ res });
       setEmail('');
       setPassword('');
-      router.push('/auth/login')
+      router.push('/dashboard')
       }
     } catch (e) {
       console.error(e);

@@ -1,21 +1,41 @@
-'use client'
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Send } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Send } from "lucide-react";
 
 export default function counselor() {
-  const [message,setMessage]=useState("")
+  const [message, setMessage] = useState("");
+  const [chatLog, setChatLog] = useState([]);
 
+  const handleSend = async () => {
+    if (!message.trim()) return;
 
+    const userMessage = message;
+    setMessage("");
+
+    setChatLog((prev) => [...prev, { type: "user", content: userMessage }]);
+
+    const res = await fetch("/api/chat", {
+      method: "POST",
+      body: JSON.stringify({ prompt: userMessage }),
+      headers: { "Content-Type": "application/json" },
+    });
+    const data = await res.json();
+
+    setChatLog((prev) => [...prev, { type: "bot", content: data.reply }]);
+  };
   return (
     <div className="px-4 sm:px-8 md:px-16 lg:px-70 py-6 sm:py-10 md:py-15">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-8">AI Counselor Chat</h1>
+      <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-8">
+        AI Counselor Chat
+      </h1>
 
       <div className="max-w-3xl">
         <p className="mb-4 sm:mb-6 text-base sm:text-lg text-gray-600">
-          Chat with our AI counselor to get personalized guidance on colleges, careers, and the application process.
+          Chat with our AI counselor to get personalized guidance on colleges,
+          careers, and the application process.
         </p>
 
         <div className="rounded-lg border bg-white shadow-sm">
@@ -24,39 +44,46 @@ export default function counselor() {
           </div>
 
           <div className="h-[400px] overflow-y-auto p-4">
-            <div className="mb-4 flex justify-start">
-              <div className="max-w-[80%] rounded-lg bg-gray-100 p-3">
-                <p>
-                  Hello! I'm your AI college counselor. How can I help you with your college and career planning today?
-                </p>
+            {chatLog.length === 0 ? (
+              <div className="flex items-center justify-center h-full text-gray-500">
+                Start a conversation with the AI counselor
               </div>
-            </div>
-
-            <div className="mb-4 flex justify-end">
-              <div className="max-w-[80%] rounded-lg bg-blue-100 p-3">
-                <p>I'm interested in computer science but not sure which colleges to apply to.</p>
+            ) : (
+              <div className="space-y-4">
+                {chatLog.map((chat, index) => (
+                  <div key={index} className="space-y-2">
+                    {chat.type === "user" ? (
+                      <div className="flex justify-end">
+                        <div className="bg-black text-white px-4 py-2 rounded-lg max-w-[80%]">
+                          <p className="text-sm">{chat.content}</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="flex justify-start">
+                        <div className="bg-gray-100 text-gray-900 px-4 py-2 rounded-lg max-w-[80%]">
+                          <p className="text-sm">{chat.content}</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
-            </div>
-
-            <div className="flex justify-start">
-              <div className="max-w-[80%] rounded-lg bg-gray-100 p-3">
-                <p>
-                  That's a great field! To give you the best college recommendations for computer science, I'll need to
-                  know a few things:
-                </p>
-                <ol className="ml-4 mt-2 list-decimal">
-                  <li>What's your approximate exam rank or expected score?</li>
-                  <li>Do you have any location preferences?</li>
-                  <li>Are you interested in any specific areas within computer science (AI, cybersecurity, etc.)?</li>
-                </ol>
-              </div>
-            </div>
+            )}
           </div>
 
           <div className="border-t p-4">
             <div className="flex items-center gap-2">
-              <Input placeholder="Type your message..." className="flex-1" />
-              <Button size="icon" className="bg-black text-white hover:bg-gray-800">
+              <Input
+                placeholder="Type your message..."
+                className="flex-1"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+              <Button
+                onClick={handleSend}
+                size="icon"
+                className="bg-black text-white hover:bg-gray-800"
+              >
                 <Send className="h-4 w-4" />
               </Button>
             </div>
@@ -64,5 +91,5 @@ export default function counselor() {
         </div>
       </div>
     </div>
-  )
+  );
 }

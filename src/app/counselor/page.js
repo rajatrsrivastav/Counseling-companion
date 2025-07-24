@@ -54,7 +54,7 @@ const Chat = () => {
         </Button>
       </div>
 
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
+      <div className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
         <div className="container mx-auto">
           <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             <div
@@ -112,7 +112,7 @@ const Chat = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

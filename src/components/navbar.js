@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { User } from "lucide-react";
 import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
-import { auth } from ".././app/firebase/firebaseConfig";
+import { auth } from "../app/firebase/firebaseConfig";
 import { useRouter } from "next/navigation";
 import {
   DropdownMenu,

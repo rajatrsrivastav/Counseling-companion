@@ -2,18 +2,17 @@
 
 import React from "react";
 import {
-  UserRoundIcon as UserRoundPen,
   GraduationCap,
   MessageSquare,
   LogIn,
 } from "lucide-react";
 import Link from "next/link";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase/firebaseConfig";
+import RenderVideosContent from "../../components/renderVideosContent"
 
 const Dashboard = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
 
   const getGreeting = () => {
     const hour = new Date().getHours();
@@ -61,7 +60,7 @@ const Dashboard = () => {
               <p className="text-sm sm:text-base text-gray-500">
                 Your career fit profile
               </p>
-              <div className="flex flex-col items-center justify-center space-y-2 py-3 sm:py-5 space-y-3 sm:space-y-5 text-center mb-6 sm:mb-10 mt-6 sm:mt-10">
+              <div className="flex flex-col items-center justify-center py-3 sm:py-5 space-y-3 sm:space-y-5 text-center mb-6 sm:mb-10 mt-6 sm:mt-10">
                 <p className="text-gray-500 text-sm sm:text-base">
                   Take the Career Fit Quiz
                 </p>
@@ -138,55 +137,6 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="px-4 sm:px-6 md:px-10 py-10 sm:py-15 md:py-20 flex items-start opacity-30">
-          <div className="items-center w-full">
-            <div className="overflow-x-auto flex whitespace-nowrap mb-4">
-              <div
-                className="px-4 py-2 rounded text-sm sm:text-base mr-2"
-                style={{
-                  boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-                }}
-              >
-                Recommendations
-              </div>
-              <div
-                className="px-4 py-2 rounded text-sm sm:text-base mr-2"
-                style={{
-                  boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-                }}
-              >
-                Saved Colleges
-              </div>
-              <div
-                className="px-4 py-2 rounded text-sm sm:text-base"
-                style={{
-                  boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-                }}
-              >
-                My Notes
-              </div>
-            </div>
-            <h1 className="text-lg sm:text-xl font-bold py-3 sm:py-5">
-              Your Branch Recommendations
-            </h1>
-            <div className="bg-white rounded py-6 sm:py-10 px-3">
-              <p className="text-gray-400 text-center">Content preview...</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="px-4 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5 opacity-30">
-          <div>
-            <h1 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-5">
-              Upcoming Events
-            </h1>
-          </div>
-          <div className="bg-white rounded py-6 sm:py-10 px-3">
-            <p className="text-gray-400 text-center">
-              No upcoming events at the moment.
-            </p>
-          </div>
-        </div>
       </div>
     );
   }
@@ -211,7 +161,7 @@ const Dashboard = () => {
           >
             <h2 className="text-xl sm:text-2xl font-semibold">Quiz Summary</h2>
             <p className="text-sm sm:text-base text-gray-500">
-              Your career fit profile
+              Trivia Quiz
             </p>
             <div className="flex flex-col items-center justify-center py-3 sm:py-5 space-y-3 sm:space-y-5 text-center mb-6 sm:mb-10 mt-6 sm:mt-10">
               <p className="text-gray-500 text-sm sm:text-base">
@@ -257,66 +207,13 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="px-4 sm:px-6 md:px-10 py-10 sm:py-15 md:py-20 flex items-start">
-        <Tabs defaultValue="tab-1" className="items-center w-full">
-          <TabsList className="overflow-x-auto flex whitespace-nowrap">
-            <TabsTrigger
-              value="tab-1"
-              style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-              className="text-sm sm:text-base"
-            >
-              Recommendations
-            </TabsTrigger>
-            <TabsTrigger
-              value="tab-2"
-              style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-              className="text-sm sm:text-base"
-            >
-              {" "}
-              Saved Colleges
-            </TabsTrigger>
-            <TabsTrigger
-              value="tab-3"
-              style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-              className="text-sm sm:text-base"
-            >
-              My Notes
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent value="tab-1" className="w-full">
-            <h1 className="text-lg sm:text-xl font-bold py-3 sm:py-5">
-              Your Branch Recommendations
-            </h1>
-            <p className="text-muted-foreground p-4 text-center text-xs">
-              <span className="flex flex-col items-center justify-center space-x-0 sm:space-x-5 bg-white rounded py-6 sm:py-10 px-3 text-sm space-y-3 sm:space-y-5"></span>
-            </p>
-          </TabsContent>
-          <TabsContent value="tab-2" className="w-full py-6 sm:py-10 md:py-15">
-            <p className="text-muted-foreground p-4 text-center text-xs">
-              <span className="flex flex-col items-center justify-center space-x-0 sm:space-x-5 bg-white rounded py-6 sm:py-10 px-3 text-sm  space-y-3 sm:space-y-5"></span>
-            </p>
-          </TabsContent>
-          <TabsContent value="tab-3" className="w-full py-6 sm:py-10 md:py-15">
-            <p className="text-muted-foreground p-4 text-center text-xs">
-              <span className="flex-col justify-center space-x-0 sm:space-x-5 bg-white rounded py-6 sm:py-10 px-3 text-sm flex items-center space-y-3 sm:space-y-5"></span>
-            </p>
-          </TabsContent>
-        </Tabs>
-      </div>
-      <div className="px-4 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5">
-        <div>
-          <h1 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-5">
-            Upcoming Events
-          </h1>
+            <div className="w-full">
+                <h1 className="text-2xl sm:text-3xl font-bold mb-2">NEET Video Recommendation</h1>
+                <div className="w-full py-6 sm:py-10 md:py-15">
+                     <RenderVideosContent/>
+                </div>
+            </div>
         </div>
-        <div className="flex-col justify-center bg-white rounded py-6 sm:py-10 px-3 text-sm flex items-center space-x-0 sm:space-x-2 space-y-3 sm:space-y-5">
-          <p className="text-gray-500 text-sm sm:text-base">
-            No upcoming events at the moment.
-          </p>
-          <p className="text-gray-500 text-sm sm:text-base">
-            Check back later for JEE counseling sessions and webinars.
-          </p>
-        </div>
-      </div>
     </div>
   );
 };

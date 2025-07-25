@@ -164,13 +164,13 @@ export default function Home() {
       <div className="py-3 sm:py-4 md:py-5">
         <div className="container mx-auto px-4 text-center ">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 md:mb-8">
-            Ready to Find Your Perfect College?
+            Answer a few questions to find your perfect academic focus
           </h2>
           <button
             className="text-base px-4 sm:px-5 bg-black text-white rounded py-2 hover:bg-gray-800 transition duration-300 transition-all duration-300 transform hover:scale-[1.02]"
             style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
           >
-            <Link href="/quiz">Take the Career Fit Quiz</Link>
+            <Link href="/quiz">Take the Academic Quiz</Link>
           </button>
         </div>
       </div>

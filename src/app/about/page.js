@@ -11,8 +11,8 @@ const page = () => {
             <h1 className='text-2xl sm:text-3xl font-bold my-6 sm:my-10'>What Makes Us Unique</h1>
             <div className='space-y-4 sm:space-y-5'>
                 <div className='p-4 sm:p-6 px-4 sm:px-7 rounded space-y-3 sm:space-y-4 transition-all duration-300 transform hover:scale-[1.02]' style={{ boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
-                    <h2 className='text-lg sm:text-xl font-bold'>Interactive Career Fit Quiz</h2>
-                    <p className='text-sm sm:text-base text-gray-500'>Our AI-driven quiz learns your preferences, interests, and goals to provide personalized recommendations.</p>
+                    <h2 className='text-lg sm:text-xl font-bold'>Academic Quiz</h2>
+                    <p className='text-sm sm:text-base text-gray-500'>Answer a few questions to find your perfect academic focus.</p>
                 </div>
                 <div className='p-4 sm:p-6 px-4 sm:px-7 rounded space-y-3 sm:space-y-4 transition-all duration-300 transform hover:scale-[1.02]' style={{ boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
                     <h2 className='text-lg sm:text-xl font-bold'>Best-Fit Branch Recommendations</h2>

@@ -7,7 +7,6 @@ export default function RenderVideosContent() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
-    // Wrap fetchVideos in useCallback
     const fetchVideos = useCallback(async () => {
         setLoading(true);
         setError(false);
@@ -26,13 +25,12 @@ export default function RenderVideosContent() {
         } finally {
             setLoading(false);
         }
-    }, []); // Empty dependency array means fetchVideos is created only once
+    }, []);
 
     useEffect(() => {
         fetchVideos();
-    }, [fetchVideos]); // Now, fetchVideos's identity is stable, so useEffect runs only once
+    }, [fetchVideos]);
 
-    // ... rest of your component (render logic) remains the same ...
     if (loading) {
         return (
             <p className="text-muted-foreground p-4 text-center text-xs">

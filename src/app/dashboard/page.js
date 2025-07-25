@@ -41,7 +41,7 @@ const Dashboard = () => {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between px-4 sm:px-6 md:px-10 py-6 sm:py-10 md:py-15">
           <div>
             <h1 className="text-2xl sm:text-3xl font-bold mb-2">
-              Welcome to RankMate
+              Welcome to NEETPulse
             </h1>
             <p className="text-base sm:text-lg text-gray-600">
               Your personalized college guidance platform
@@ -111,7 +111,7 @@ const Dashboard = () => {
             >
               <LogIn className="mx-auto mb-4 text-gray-400" size={48} />
               <h2 className="text-xl sm:text-2xl font-semibold mb-2">
-                Welcome to RankMate
+                Welcome to NEETPulse
               </h2>
               <p className="text-sm sm:text-base text-gray-500 mb-6">
                 Please sign in to access your personalized dashboard and start
@@ -125,7 +125,7 @@ const Dashboard = () => {
                   Sign In
                 </Link>
                 <p className="text-xs sm:text-sm text-gray-500">
-                  Don't have an account?{" "}
+                  Do not have an account?{" "}
                   <Link
                     href="/auth/signup"
                     className="text-black hover:underline font-medium"
@@ -165,7 +165,7 @@ const Dashboard = () => {
             </p>
             <div className="flex flex-col items-center justify-center py-3 sm:py-5 space-y-3 sm:space-y-5 text-center mb-6 sm:mb-10 mt-6 sm:mt-10">
               <p className="text-gray-500 text-sm sm:text-base">
-                You haven't taken the Career Fit Quiz yet.
+                You have not taken the Career Fit Quiz yet.
               </p>
               <button className="bg-black text-white rounded py-1.5 sm:py-2 px-3 sm:px-5 text-xs sm:text-sm hover:bg-gray-800 transition duration-300 text-[0.875rem] sm:text-[1rem]">
                 <Link href="/quiz">Take Quiz Now</Link>

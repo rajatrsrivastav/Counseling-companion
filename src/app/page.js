@@ -41,9 +41,9 @@ export default function Home() {
               className="w-full md:w-auto outline-solid outline-1px outline-gray-200 rounded-[12px] p-5 shadow-md space-y-2 transition-all duration-300 transform hover:scale-[1.02]"
               style={{ boxShadow: "rgba(153, 153, 160, 0.2) 0px 7px 29px 0px" }}
             >
-              <h2 className="text-xl font-semibold ">Career Quiz</h2>
+              <h2 className="text-xl font-semibold ">Academic Quiz</h2>
               <p className="text-base text-gray-500">
-                Find your ideal career path with our personalized quiz
+                Answer a few questions to find your perfect academic focus
               </p>
               <button className="bg-black text-white rounded py-2 px-4.5 text-sm hover:bg-gray-800 transition duration-300">
                 <Link href="/quiz">Take Quiz</Link>
@@ -86,8 +86,8 @@ export default function Home() {
             style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
           >
             <p className="mb-4 italic text-gray-600">
-              "The career quiz helped me discover my passion for computer
-              science. I'm now studying at my dream college!"
+              The career quiz helped me discover my passion for computer
+              science. I am now studying at my dream college!
             </p>
             <div className="flex items-center">
               <div className="mr-4 h-8 sm:h-10 w-8 sm:w-10 rounded-full bg-gray-200 ">
@@ -102,7 +102,7 @@ export default function Home() {
               <div>
                 <p className="font-medium">Priya S.</p>
                 <p className="text-xs sm:text-sm text-gray-500">
-                  Computer Science Student
+                  Professional final Year MBBS Student (Medico)
                 </p>
               </div>
             </div>
@@ -112,8 +112,8 @@ export default function Home() {
             style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
           >
             <p className="mb-4 italic text-gray-600">
-              "The counseling tool clarified all my doubts about engineering
-              branches. I finally chose what truly excites me!"
+              The counseling tool clarified all my doubts about engineering
+              branches. I finally chose what truly excites me!
             </p>
             <div className="flex items-center">
               <div className="mr-4 h-8 sm:h-10 w-8 sm:w-10 rounded-full bg-gray-200 flex items-center justify-center">
@@ -128,7 +128,7 @@ export default function Home() {
               <div>
                 <p className="font-medium">Rohan M.</p>
                 <p className="text-xs sm:text-sm text-gray-500">
-                  Electronics & Communication Student
+                  First Year MBBS Student
                 </p>
               </div>
             </div>
@@ -138,8 +138,8 @@ export default function Home() {
             style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
           >
             <p className="mb-4 italic text-gray-600">
-              "The college predictor was spot on! I got into 3 of the 5 colleges
-              it recommended for me."
+              The college predictor was spot on! I got into 3 of the 5 colleges
+              it recommended for me.
             </p>
             <div className="flex items-center">
               <div className="mr-4 h-8 sm:h-10 w-8 sm:w-10 rounded-full bg-gray-200">
@@ -154,7 +154,7 @@ export default function Home() {
               <div>
                 <p className="font-medium">Rahul M.</p>
                 <p className="text-xs sm:text-sm text-gray-500">
-                  Engineering Student
+                  Aspiring Physician, second Year Medical Student
                 </p>
               </div>
             </div>

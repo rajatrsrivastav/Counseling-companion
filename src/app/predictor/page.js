@@ -56,7 +56,7 @@ const collegeData = [
   },
 ];
 
-const predictor = () => {
+const Predictor = () => {
   const [formData, setFormData] = useState({
     rank: "",
     category: "",
@@ -277,4 +277,4 @@ const predictor = () => {
     </div>
   );
 };
-export default predictor;
+export default Predictor;

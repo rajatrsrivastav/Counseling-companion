@@ -13,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const navbar = () => {
+const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
   const [signOut] = useSignOut(auth);
   const router = useRouter();
@@ -31,7 +31,7 @@ const navbar = () => {
     <div className="sticky top-0 z-50 bg-gray-100 shadow">
       <div className="flex items-center justify-between px-4 sm:px-6 md:px-10 py-4">
         <div className="text-xl font-bold">
-          <Link href="/">RankMate</Link>
+          <Link href="/">NEETPulse</Link>
         </div>
         <div className="hidden md:flex justify-between items-center">
           <ul className="flex justify-between items-center space-x-4 md:space-x-6 lg:space-x-10 px-2 md:px-4 lg:px-7">
@@ -76,4 +76,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;

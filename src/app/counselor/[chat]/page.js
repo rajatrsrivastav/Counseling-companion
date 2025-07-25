@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Send } from "lucide-react";
 
-export default function counselor() {
+export default function Counselor() {
   const [message, setMessage] = useState("");
   const [chatLog, setChatLog] = useState([]);
 

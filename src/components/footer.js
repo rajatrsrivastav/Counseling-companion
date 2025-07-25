@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-const footer = () => {
+const Footer = () => {
   return (
     <div>
         <footer className="bg-gray-100 py-6 sm:py-8 md:py-10 mt-6 sm:mt-8 md:mt-10">
@@ -17,4 +17,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default Footer

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react'; // Import useCallback
+import { useState, useEffect, useCallback } from 'react';
 
 export default function RenderVideosContent() {
     const [videos, setVideos] = useState([]);
